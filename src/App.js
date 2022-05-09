@@ -3,11 +3,16 @@ import React, { Component } from "react";
 import StaffList from "./components/StaffListComponent";
 import "./App.css";
 import { Navbar, NavbarBrand } from "reactstrap";
+import {showChangeThemes} from "./components/changeThemes"
+
+
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+
   render() {
     return (
       <div>
@@ -15,13 +20,16 @@ class App extends Component {
           <div className="container">
             <NavbarBrand href="/">Ứng dụng quản lý nhân sự v1.0</NavbarBrand>
           </div>
+          <div>
+            <button className="changecol">Themes</button>
+            <ul className="changecol-menu">
+              <li>Dạng 2 cột</li>
+              <li>Dạng 3 cột</li>
+              <li>Dạng 6 cột</li>
+            </ul>
+          </div>
         </Navbar>
         <StaffList />
-        <div className="suggest">
-        Bấm vào tên để xem thông tin.
-
-        </div>
-
       </div>
     );
   }

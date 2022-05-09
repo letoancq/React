@@ -1,25 +1,49 @@
-import { STAFFS } from "../shared/staffs";
+import { STAFFS, DEPARTMENTS } from "../shared/staffs";
 import React from "react";
+import dateFormat, { masks } from "dateformat";
+
 
 class StaffList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = STAFFS;
+    this.state = {
+      selectedInfo: null,
+    };
   }
-
-  render() {
-    const list = this.state.map((STAFFS) => {
+  onClick = (info) => {
+    return this.setState({ selectedInfo: info });
+  };
+  renderInfo = (info) => {
+    if (info != null) {
       return (
-        <span>
-          <div key={STAFFS.id} className="col ">
-            {STAFFS.name}
+        <div className="form-info" key={info.id}>
+          <h2>Họ và tên : {info.name}</h2>
+          <p>Ngày sinh : {dateFormat(info.doB, "dd/mm/yyyy")}</p>
+          <p>Ngày vào công ty : {dateFormat(info.startDate, "dd/mm/yyyy")}</p>
+          <p>Phòng ban : {info.department.name}</p>
+          <p>Số ngày nghỉ còn lại :  {info.annualLeave}</p>
+          <p>Số ngày đã làm thêm :  {info.overTime}</p>
+          
+        </div>
+      );
+    } else {
+      return <div className="suggest">Bấm vào tên để xem thông tin.</div>;
+    }
+  };
+  render() {
+    const list = STAFFS.map((info) => {
+      return (
+        <span onClick={() => this.onClick(info)}>
+          <div key={info.id} className="col">
+            {info.name}
           </div>
         </span>
       );
     });
     return (
-      <div className="staff">
-        {list}
+      <div className="container">
+        <div className="staff">{list}</div>;
+        <div className="info">{this.renderInfo(this.state.selectedInfo)}</div>
       </div>
     );
   }
