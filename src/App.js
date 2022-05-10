@@ -19,7 +19,7 @@ class App extends Component {
             <NavbarBrand href="/">Ứng dụng quản lý nhân sự v1.0</NavbarBrand>
           </div>
           <div>
-            <button className="changecol" onClick={ChangeThemes()}>
+            <button className="changecol" onClick={() => ChangeThemes()}>
               Change
             </button>
             <ul className="changecol-menu" >

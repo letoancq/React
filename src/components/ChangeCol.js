@@ -12,5 +12,5 @@ export function ChangeCol3() {
     col3.style={width:'30%'};
 }
 export function ChangeCol6() {
-    col6.style={width:'50%'};
+    getComputedStyle(col6).width ="50%";
 }
