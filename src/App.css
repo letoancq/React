@@ -8,17 +8,17 @@
   position: relative;
 }
 .changecol-menu{
-    display: none;
+    /* display: none; */
     position: absolute;
     list-style-type: none;
-    top: 44px;
+    top: 100%;
     right: 20px;
-    background-color:#abe0eb;
+    background-color:#0ebe43;
     text-align: center;
     padding: 4px;
     border-radius: 8px;
+    z-index:1;
 }
-
 ul li{
     border: 2px solid hwb(29 13% 7%);
     border-radius: 8px;;
@@ -90,8 +90,13 @@ span {
 .changecol {
   border: none;
   border-radius: 20px;
-  padding: 4px;
+  padding: 4px 6px;
   cursor: pointer;
   background-color: rgb(8, 7, 7);
-  color: white;
+  color: orange;
+}
+.changecol-menu  li:hover,
+.changecol:hover {
+  background-color:#ccc;
+  color: black;
 }

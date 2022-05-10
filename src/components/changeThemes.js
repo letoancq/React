@@ -1,8 +1,11 @@
-export const showChangeThemes =() =>  {
-    const col = document.querySelectorAll(".col");
-   if (col.style.display === "none") {
-     col.style.display = "block";
-   } else {
-     col.style.display = "none";
-   }
- }
+const changecolMenu = document.querySelectorAll(".changecol-menu");
+
+function ChangeThemes() {
+  if (changecolMenu.style === { display: "none" }) {
+    changecolMenu.style === { display: "block" };
+  } else {
+    changecolMenu.style === { display: "none" };
+  }
+}
+
+export default ChangeThemes;

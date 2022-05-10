@@ -1,6 +1,6 @@
-import { STAFFS, DEPARTMENTS } from "../shared/staffs";
+import { STAFFS } from "../shared/staffs";
 import React from "react";
-import dateFormat, { masks } from "dateformat";
+import dateFormat from "dateformat";
 
 
 class StaffList extends React.Component {
@@ -31,11 +31,11 @@ class StaffList extends React.Component {
     }
   };
   render() {
-    const list = STAFFS.map((info) => {
+    const list = STAFFS.map((abc) => {
       return (
-        <span onClick={() => this.onClick(info)}>
-          <div key={info.id} className="col">
-            {info.name}
+        <span onClick={() => this.onClick(abc)}>
+          <div key={abc.id} className="col">
+            {abc.name}
           </div>
         </span>
       );
