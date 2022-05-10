@@ -24,8 +24,8 @@ class App extends Component {
             </button>
             <ul className="changecol-menu" >
               <li id="col6" onClick={() => ChangeCol6()}>Dạng 2 cột</li>
-              <li id="col4">Dạng 3 cột</li>
-              <li id="col2">Dạng 6 cột</li>
+              <li id="col4" onClick={() => ChangeCol3()}>Dạng 3 cột</li>
+              <li id="col2"onClick={() => ChangeCol2()}>Dạng 6 cột</li>
             </ul>
           </div>
         </Navbar>

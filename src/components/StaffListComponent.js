@@ -33,7 +33,7 @@ class StaffList extends React.Component {
   render() {
     const list = STAFFS.map((abc) => {
       return (
-        <span onClick={() => this.onClick(abc)}>
+        <span className="span-list" onClick={() => this.onClick(abc)}>
           <div key={abc.id} className="col">
             {abc.name}
           </div>

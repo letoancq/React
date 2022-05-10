@@ -1,3 +1,4 @@
+
 .navbar {
   display: flex;
 }
@@ -29,11 +30,13 @@ ul li{
 }
 .staff {
   display: flex;
+  
   flex-wrap: wrap;
+  width: 100%;
 }
 span {
   flex: 0 0 50%;
-  max-width: 45%;
+  width: 45%;
   border: 1px solid;
   margin: 6px auto;
   cursor: pointer;
@@ -67,28 +70,7 @@ span {
   font-size: 20px;
 }
 
-/* desktop */
-@media screen and (min-width: 968px) {
-  span {
-    max-width: 30%;
-  }
-  span {
-    width: 100%;
-  }
-}
-/* Tablet */
-@media screen and (min-width: 768px) and (max-width: 967px) {
-  span {
-    max-width: 48%;
-  }
-}
-/* Mobile */
-@media screen and (max-width: 767px) {
-  span {
-    min-width: 90%;
-    max-width: 100%;
-  }
-}
+
 .changecol {
   border: none;
   border-radius: 20px;
@@ -101,4 +83,22 @@ span {
 .changecol:hover {
   background-color:#ccc;
   color: black;
+}
+/* desktop */
+@media screen and (min-width: 968px) {
+  span {
+    max-width: 30%;
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 967px) {
+  span {
+    max-width: 48%;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+  span {
+    min-width: 90%;
+  }
 }
