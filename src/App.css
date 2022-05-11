@@ -3,9 +3,8 @@
   display: flex;
 }
 .container {
-  width: 80%;
-  margin-left: 0;
-  margin-right: 0;
+  width: 90%;
+  margin: auto;
   position: relative;
 }
 .changecol-menu{
@@ -35,7 +34,6 @@ ul li{
   width: 100%;
 }
 span {
-  flex: 0 0 50%;
   width: 45%;
   border: 1px solid;
   margin: 6px auto;
@@ -45,6 +43,9 @@ span {
   border-radius: 8px;
   background-color: #abe0eb;
 
+}
+span.span-list {
+  margin: 4px 4px;
 }
 .col {
   width: 100%;
@@ -87,18 +88,18 @@ span {
 /* desktop */
 @media screen and (min-width: 968px) {
   span {
-    max-width: 30%;
+    width: 30%;
   }
 }
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 967px) {
   span {
-    max-width: 48%;
+    width: 48%;
   }
 }
 /* Mobile */
 @media screen and (max-width: 767px) {
   span {
-    min-width: 90%;
+    width: 90%;
   }
 }
