@@ -1,7 +1,7 @@
 const col = document.getElementsByClassName("span-list");
 export function ChangeCol2() {
   for (var i = 0; i < col.length; i++) {
-    col[i].style.width = "16%";
+    col[i].style.width = "15%";
   }
 }
 export function ChangeCol3() {

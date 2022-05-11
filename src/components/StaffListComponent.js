@@ -41,7 +41,7 @@ class StaffList extends React.Component {
       );
     });
     return (
-      <div className="container">
+      <div className="container-staff">
         <div className="staff">{list}</div>;
         <div className="info">{this.renderInfo(this.state.selectedInfo)}</div>
       </div>
