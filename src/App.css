@@ -26,7 +26,7 @@ ul li {
   cursor: pointer;
   background-color: rgb(239, 243, 18);
 }
-.content{
+.content {
   width: 100%;
 }
 .staff {
@@ -104,26 +104,26 @@ span {
   body {
     font-size: 10px;
   }
-  .container{
+  .container {
     width: 70%;
-    margin:0;
+    margin: 0;
   }
-  .navbar{
-    font-size:16px;
+  .navbar {
+    font-size: 16px;
   }
-  .changecol{
-    font-size:10px
+  .changecol {
+    font-size: 10px;
   }
-  .info{
+  .info {
     width: 80%;
     margin: 0 auto;
   }
   .form-info,
-  h2{
-    font-size:14px
+  h2 {
+    font-size: 14px;
   }
-  .suggest{
+  .suggest {
     margin: auto;
-    font-size:16px;
+    font-size: 16px;
   }
 }

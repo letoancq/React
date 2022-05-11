@@ -3,14 +3,14 @@ import React, { Component } from "react";
 import StaffList from "./components/StaffListComponent";
 import "./App.css";
 import { Navbar, NavbarBrand } from "reactstrap";
-import  ChangeThemes  from "./components/changeThemes";
-import {ChangeCol6, ChangeCol3, ChangeCol2} from "./components/ChangeCol"
+import ChangeThemes from "./components/changeThemes";
+import { ChangeCol6, ChangeCol3, ChangeCol2 } from "./components/ChangeCol";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
- 
+
   render() {
     return (
       <div>
@@ -22,10 +22,16 @@ class App extends Component {
             <button className="changecol" onClick={() => ChangeThemes()}>
               Change
             </button>
-            <ul className="changecol-menu" >
-              <li id="col6" onClick={() => ChangeCol6()}>Dạng 2 cột</li>
-              <li id="col4" onClick={() => ChangeCol3()}>Dạng 3 cột</li>
-              <li id="col2"onClick={() => ChangeCol2()}>Dạng 6 cột</li>
+            <ul className="changecol-menu">
+              <li id="col6" onClick={() => ChangeCol6()}>
+                Dạng 2 cột
+              </li>
+              <li id="col4" onClick={() => ChangeCol3()}>
+                Dạng 3 cột
+              </li>
+              <li id="col2" onClick={() => ChangeCol2()}>
+                Dạng 6 cột
+              </li>
             </ul>
           </div>
         </Navbar>
