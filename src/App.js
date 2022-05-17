@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-// import {STAFFS} from "./shared/staffs;"
-import StaffList from "./components/StaffListComponent";
+import Menu from './components/MenuComponent';
+import { DISHES } from './shared/dishes';
 import "./App.css";
 import { Navbar, NavbarBrand } from "reactstrap";
-import ChangeThemes from "./components/changeThemes";
-import { ChangeCol6, ChangeCol3, ChangeCol2 } from "./components/ChangeCol";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      dishes: DISHES
+    };
   }
 
   render() {
@@ -18,24 +18,8 @@ class App extends Component {
           <div className="container">
             <NavbarBrand href="/">Ứng dụng quản lý nhân sự v1.0</NavbarBrand>
           </div>
-          <div>
-            <button className="changecol" onClick={() => ChangeThemes()}>
-              Change
-            </button>
-            <ul className="changecol-menu">
-              <li id="col6" onClick={() => ChangeCol6()}>
-                Dạng 2 cột
-              </li>
-              <li id="col4" onClick={() => ChangeCol3()}>
-                Dạng 3 cột
-              </li>
-              <li id="col2" onClick={() => ChangeCol2()}>
-                Dạng 6 cột
-              </li>
-            </ul>
-          </div>
         </Navbar>
-        <StaffList />
+        <Menu dishes={this.state.dishes}/>
       </div>
     );
   }
