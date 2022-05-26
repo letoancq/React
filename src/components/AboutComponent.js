@@ -2,6 +2,7 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Fade, Stagger } from 'react-animation-components';
+import {LEADERS} from '../shared/leaders';
 
 
 
@@ -22,8 +23,7 @@ function RenderLeader({leader}) {
 }
 
 function LeaderList(props) {
-
-    const leaders = props.leaders.leaders.map((leader) => {
+    const leaders = LEADERS.map((leader) => {
         return (
             <Fade in key={leader.id}>
                 <div className="col-12 mt-2">
@@ -44,7 +44,7 @@ function LeaderList(props) {
 
 
 function About(props) {
-
+    console.log(props)
     return(
         <div className="container">
             <div className="row">
