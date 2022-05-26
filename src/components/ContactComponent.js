@@ -37,6 +37,8 @@ class Contact extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
   }
+
+  // để có thể nhập tay value vào ô input
   handleInputChange(event) {
     const target = event.target;
     // Nếu là 1 checkbox  thì giá trị được truy xuất từ đích,
@@ -49,18 +51,22 @@ class Contact extends React.Component {
     });
   }
 
+
   handleSubmit(event) {
     console.log("Current State is :" + JSON.stringify(this.state));
     alert("Current State is :" + JSON.stringify(this.state));
     event.preventDefault();
   }
 
+
+  // kiểm tra định dạng các ô input
   handleBlur = (field) => (event) => {
     this.setState({
       touched: { ...this.state.touched, [field]: true },
     });
   };
 
+  //check valid
   validate(firstname, lastname, telnum, email) {
     const errors = {
       firstname: "",
