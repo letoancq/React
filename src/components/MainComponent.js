@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
     comments: state.comments,
     leaders: state.leaders,
     promotions: state.promotions,
-  }
+  };
 };
 class Main extends Component {
   constructor(props) {
