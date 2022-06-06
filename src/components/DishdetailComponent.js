@@ -20,13 +20,13 @@ import {
 import {Loading} from "./LoadingComponent";
 import { Link } from "react-router-dom";
 import { Control, LocalForm } from "react-redux-form";
-
+import {baseUrl} from "../shared/baseUrl";
 
 function RenderDish({ dish }) {
   return (
     <div className="col-12 col-md-5 m-1">
       <Card>
-        <CardImg src={dish.image} />
+        <CardImg src={baseUrl + dish.image} />
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
           <CardText>{dish.description}</CardText>
